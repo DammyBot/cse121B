@@ -1,0 +1,17 @@
+#mainBody{
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+#mainBody h1{
+    background-color: black;
+    color: white;
+    border-radius: 2rem;
+}
+body{
+    background-color: rgba(138, 138, 138, 0.3);
+}
+#output{
+    width: 90%;
+    margin: 0 auto;
+}
