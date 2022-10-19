@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Oluwadamilare Obalana's week 6 project">
     <title>Oluwadamilare Obalana's Week 6 Project</title>
+    <link href="styles/main.css" rel="stylesheet">
 </head>
+
 <body>
-    <h1>Hello</h1>
-    <h3>Welcome to my week 6 project</h3>
-    <p>This project would fetch data from <a href="https://pokeapi.co/api/v2/pokemon/">Pokeapi.co</a> and display the content here</p>
-    
-    <section id="output"></section>
-    <ul id="outputList"></ul>
+    <div id="mainBody">
+        <h1>Hello</h1>
+        <h3>Welcome to my week 6 project</h3>
+        <p>This project would fetch data from <a
+                href="https://pokeapi.co/api/v2/pokemon/">Pokeapi.co</a> and display the content
+            here</p>
+        <p>
+            Sort by:
+            <select id="sortBy">
+                <option value="nameAscending"> Name Ascending</option>
+                <option value="nameDescending"> Name Descending</option>
+            </select>
+        </p>
+        <section id="output"></section>
+    </div>
+    <script src="script/main.js"></script>
 </body>
+
 </html>
