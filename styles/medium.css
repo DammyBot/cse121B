@@ -1,0 +1,42 @@
+@media only screen and (min-width: 35rem) {
+    #picture_text h1 {
+        font-size: 30px;
+    }
+
+    img {
+        width: 20%;
+        border-radius: 1rem;
+        box-shadow: 0px 0px 8px 0px var(--offblack);
+    }
+
+    h2 {
+        font-size: 30px;
+        text-align: center;
+        padding: 0.2rem;
+    }
+
+    .content ul li {
+        font-size: 18px;
+    }
+
+    .content ul li a{
+        font-size: 18px;
+    }
+
+    .sub {
+        font-size: larger;
+    }
+
+    #bottom {
+        border-radius: 1rem;
+        box-shadow: 0px 0px 8px 0px var(--offblack);
+    }
+    
+    #bottom p, .date, #year, #currentdate {
+        font-size: 18px;
+    }
+
+    #picture_text h1 {
+        font-size: 1rem;
+    }
+}
