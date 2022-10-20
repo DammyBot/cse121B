@@ -20,7 +20,7 @@ function output(data) {
 
 //   const array1 = data.results;
   //Arranges the list
-  data.sort(compare);
+  
 
   const arranged = data.forEach((value) => {
     const container = document.createElement("div");
@@ -53,37 +53,46 @@ function compare(a, b) {
 }
 
 function reset() {
-  document.getElementById("output").innerHTML = "";
+  document.querySelector("#output").innerHTML = "";
 }
 
 function sortBy() {
   reset();
-  const filter = document.querySelector("#sortBy");
-  switch (filter){
-    case "nameAscending":
-        output(newArray.sort((value1,value2) => {
-            const name1 = value1.name.toLowerCase();
-            const name2 = value2.name.toLowerCase();
-            if (name1 > name2) return 1;
-            else if (name1 < name2) return -1;
-            else return 0;
-        }))
-        break;
-    case "nameDescending":
-        output(newArray.sort((value1,value2) => {
-            const name1 = value1.name.toLowerCase();
-            const name2 = value2.name.toLowerCase();
-            if (name1 > name2) return -1;
-            else if (name1 < name2) return 1;
-            else return 0;
-        }))
-        break;
+  let filter = document.getElementById("sortBy").value;
+  switch (filter) {
+    case "ascending":
+      output(
+        newArray.sort((value1, value2) => {
+          let name1 = value1.name.toLowerCase();
+          let name2 = value2.name.toLowerCase();
+          if (name1 > name2) return 1;
+          else if (name1 < name2) return -1;
+          else return 0;
+        })
+      );
+      break;
+    case "descending":
+      output(
+        newArray.sort((value1, value2) => {
+          let name1 = value1.name.toLowerCase();
+          let name2 = value2.name.toLowerCase();
+          if (name1 > name2) return -1;
+          else if (name1 < name2) return 1;
+          else return 0;
+        })
+      );
+      break;
     default:
-        output(newArray.sort((value1,value2) => {
-            value1.name.toLowerCase() > value2.name.toLowerCase() ? -1 :
-            value1.name.toLowerCase() < value2.name.toLowerCase() ? 1 : 0
-        }))
+      output(
+        newArray.sort((value1, value2) => {
+          value1.name.toLowerCase() > value2.name.toLowerCase()
+            ? -1
+            : value1.name.toLowerCase() < value2.name.toLowerCase()
+            ? 1
+            : 0;
+        })
+      );
   }
-};
+}
 
 document.getElementById("sortBy").addEventListener("change", sortBy);
